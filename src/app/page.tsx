@@ -107,10 +107,10 @@ export default function Home() {
         </div>
 
         {/* Main Content */}
-        <div className="w-full md:w-2/3 p-8">
+        <div className="w-full md:w-2/3 p-8 pt-24">
           <section className="mb-12">
-            <h2 className="text-3xl font-bold mb-4">About Me</h2>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">About Me</h2>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
               I am a graduate student at Columbia University, passionate about software development
               and machine learning. With a strong foundation in computer science and practical
               experience in web development, I enjoy creating innovative solutions that combine
