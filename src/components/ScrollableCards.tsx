@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 interface Card {
@@ -17,15 +17,20 @@ interface ScrollableCardsProps {
 }
 
 export default function ScrollableCards({ title, cards }: ScrollableCardsProps) {
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: 'left' | 'right') => {
-    const scrollAmount = 300; // 调整滚动距离
-    setScrollPosition(prev => 
-      direction === 'left' 
-        ? Math.max(prev - scrollAmount, 0)
-        : Math.min(prev + scrollAmount, 1000)
-    );
+    const scrollAmount = 300;
+    if (scrollContainerRef.current) {
+      const newScrollLeft = direction === 'left'
+        ? Math.max(scrollContainerRef.current.scrollLeft - scrollAmount, 0)
+        : Math.min(scrollContainerRef.current.scrollLeft + scrollAmount, scrollContainerRef.current.scrollWidth - scrollContainerRef.current.clientWidth);
+      
+      scrollContainerRef.current.scrollTo({
+        left: newScrollLeft,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
@@ -40,8 +45,8 @@ export default function ScrollableCards({ title, cards }: ScrollableCardsProps) 
           <FaChevronLeft />
         </button>
         <div 
+          ref={scrollContainerRef}
           className="flex gap-4 overflow-x-auto scrollbar-hide"
-          style={{ scrollBehavior: 'smooth', scrollLeft: scrollPosition }}
         >
           {cards.map((card, index) => (
             <div 
