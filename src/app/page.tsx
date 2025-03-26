@@ -5,22 +5,57 @@ import ScrollableCards from '@/components/ScrollableCards';
 export default function Home() {
   const experiences = [
     {
-      title: 'Graduate Student',
-      description: 'Columbia University',
-      period: '2023 - Present',
-      tags: ['Computer Science', 'Machine Learning']
+      title: 'Software Engineer Intern',
+      company: 'Network Tree',
+      period: 'Aug 2024 - Dec 2024',
+      description: 'Developed and launched a cross-platform personal networks management application using React Native, achieving successful deployment to iOS App Store with 4.5+ star rating.',
+      tags: ['React Native', 'Node.js', 'AWS']
     },
-    // Add more experiences here
+    {
+      title: 'Software Engineer Intern',
+      company: 'Smart H.S.E Tech',
+      period: 'May 2024 - Jul 2024',
+      description: 'Led development of a data visualization portal serving 1000+ daily active users, implementing real-time data interaction and SSO authentication.',
+      tags: ['Java', 'Spring Boot', 'PostgreSQL']
+    },
+    {
+      title: 'Master of Computer Science',
+      company: 'Columbia University',
+      period: 'May 2023 - May 2025',
+      description: 'GPA: 4.0/4.0 • Courses: Cloud Computing, Mobile App Development, Database Systems, UI Design, Data Structure and Algorithms, Advanced Programming, Design for Gen AI, NLP',
+      tags: ['Cloud Computing', 'Mobile Development', 'AI']
+    },
+    {
+      title: 'Master of Arts in Politics',
+      company: 'New York University',
+      period: 'Sep 2021 - May 2023',
+      description: 'GPA: 3.8/4.0',
+      tags: ['Politics', 'Research', 'Analysis']
+    },
+    {
+      title: 'Bachelor of Social Sciences',
+      company: 'City University of Hong Kong',
+      period: 'Sep 2015 - Dec 2019',
+      description: 'GPA: 3.7/4.0',
+      tags: ['Social Sciences', 'Research', 'Analysis']
+    }
   ];
 
   const projects = [
     {
-      title: 'Personal Portfolio Website',
-      description: 'A modern, responsive portfolio website built with Next.js and Tailwind CSS.',
-      tags: ['Next.js', 'TypeScript', 'Tailwind CSS'],
-      link: 'https://github.com/dl3648/dl3648.github.io'
+      title: 'String Swift',
+      description: 'Racket Stringing Ordering Platform - Architected microservices platform using AWS (EC2, Lambda, API Gateway, Step Functions, CloudWatch) and Heroku, reducing order processing time by 35%.',
+      period: 'Sep 2024 - Dec 2024',
+      tags: ['React', 'Python', 'AWS'],
+      link: 'https://github.com/dl3648/string-swift'
     },
-    // Add more projects here
+    {
+      title: 'CoverCraft AI',
+      description: 'Cover Letter Generator Application - Built OpenAI Assistant API-powered solution generating tailored cover letters in <3 minutes, featuring job-resume alignment analysis with 10+ comparison metrics.',
+      period: 'Jan 2024 - May 2024',
+      tags: ['React', 'Node.js', 'OpenAI'],
+      link: 'https://github.com/dl3648/covercraft-ai'
+    }
   ];
 
   return (
