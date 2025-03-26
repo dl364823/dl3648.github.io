@@ -1,11 +1,12 @@
 'use client';
 
-import { useState, useRef } from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { useRef } from 'react';
+import { FaChevronLeft, FaChevronRight, FaGithub } from 'react-icons/fa';
 
 interface Card {
   title: string;
-  description: string;
+  company?: string;
+  description?: string;
   period?: string;
   tags?: string[];
   link?: string;
@@ -53,11 +54,13 @@ export default function ScrollableCards({ title, cards }: ScrollableCardsProps) 
               key={index}
               className="flex-none w-80 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
             >
-              <h4 className="font-bold text-lg mb-2">{card.title}</h4>
-              {card.period && (
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">{card.period}</p>
+              <h4 className="font-bold text-lg mb-1">{card.title}</h4>
+              {card.company && (
+                <p className="text-gray-600 dark:text-gray-400 mb-2">{card.company}</p>
               )}
-              <p className="text-gray-600 dark:text-gray-300 mb-4">{card.description}</p>
+              {card.period && (
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">{card.period}</p>
+              )}
               {card.tags && (
                 <div className="flex flex-wrap gap-2 mb-4">
                   {card.tags.map((tag, tagIndex) => (
@@ -75,9 +78,9 @@ export default function ScrollableCards({ title, cards }: ScrollableCardsProps) 
                   href={card.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 dark:text-blue-400 hover:underline"
+                  className="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline"
                 >
-                  Learn more →
+                  <FaGithub /> View on GitHub
                 </a>
               )}
             </div>
