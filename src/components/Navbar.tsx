@@ -32,7 +32,7 @@ export default function Navbar() {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/dongzhou-li"
+            href="https://www.linkedin.com/in/dongzhou-roger-li-161318278/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xl hover:text-gray-600 dark:hover:text-gray-300"
@@ -40,7 +40,7 @@ export default function Navbar() {
             <FaLinkedin />
           </a>
           <a
-            href="mailto:dl3648@columbia.edu"
+            href="mailto:dongzholi23@gmail.com"
             className="text-xl hover:text-gray-600 dark:hover:text-gray-300"
           >
             <FaEnvelope />
