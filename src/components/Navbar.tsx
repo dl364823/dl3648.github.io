@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { FaMoon, FaSun } from 'react-icons/fa';
+import { FaMoon, FaSun, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 export default function Navbar() {
   const [isDark, setIsDark] = useState(false);
@@ -22,27 +22,36 @@ export default function Navbar() {
   return (
     <nav className="fixed w-full bg-white/80 dark:bg-gray-950/80 backdrop-blur-sm z-50">
       <div className="max-w-6xl mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
-          <a href="#" className="text-xl font-bold">
-            Dongzhou Li
+        <div className="flex justify-end items-center gap-4">
+          <a
+            href="https://github.com/dl3648"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xl hover:text-gray-600 dark:hover:text-gray-300"
+          >
+            <FaGithub />
           </a>
-          <div className="flex items-center gap-8">
-            <div className="hidden md:flex gap-6">
-              <a href="#about" className="hover:text-gray-600 dark:hover:text-gray-300">
-                About
-              </a>
-              <a href="#projects" className="hover:text-gray-600 dark:hover:text-gray-300">
-                Projects
-              </a>
-            </div>
-            <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
-              aria-label="Toggle dark mode"
-            >
-              {isDark ? <FaSun className="text-xl" /> : <FaMoon className="text-xl" />}
-            </button>
-          </div>
+          <a
+            href="https://linkedin.com/in/dongzhou-li"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xl hover:text-gray-600 dark:hover:text-gray-300"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="mailto:dl3648@columbia.edu"
+            className="text-xl hover:text-gray-600 dark:hover:text-gray-300"
+          >
+            <FaEnvelope />
+          </a>
+          <button
+            onClick={toggleDarkMode}
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
+            aria-label="Toggle dark mode"
+          >
+            {isDark ? <FaSun className="text-xl" /> : <FaMoon className="text-xl" />}
+          </button>
         </div>
       </div>
     </nav>
