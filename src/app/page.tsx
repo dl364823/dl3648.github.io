@@ -86,7 +86,7 @@ export default function Home() {
                 <FaFileAlt /> Resume
               </a>
               <a
-                href="https://linkedin.com/in/dongzhou-li"
+                href="https://www.linkedin.com/in/dongzhou-roger-li-161318278/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-gray-100 dark:bg-gray-800 py-2 px-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
@@ -102,7 +102,7 @@ export default function Home() {
                 <FaGithub /> GitHub
               </a>
               <a
-                href="mailto:dl3648@columbia.edu"
+                href="mailto:dongzholi23@gmail.com"
                 className="flex items-center justify-center gap-2 bg-gray-100 dark:bg-gray-800 py-2 px-4 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
               >
                 <FaEnvelope /> Email
