@@ -62,52 +62,63 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-gray-950 text-white">
+    <main className="min-h-screen bg-gray-950 text-white relative overflow-hidden">
+      {/* Background gradient effect */}
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 opacity-50"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+      
       <Navbar />
-      <div className="max-w-6xl mx-auto px-4 py-8">
+      <div className="max-w-6xl mx-auto px-4 py-8 relative">
         <div className="flex flex-col md:flex-row gap-8">
           {/* Sidebar */}
           <div className="w-full md:w-1/3">
-            <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-500">
-              <Image
-                src="/profile-placeholder.jpg"
-                alt="Profile"
-                fill
-                className="object-cover"
-              />
+            <div className="relative w-48 h-48 mx-auto mb-6">
+              <div className="absolute inset-0 bg-blue-500/20 rounded-full blur-xl"></div>
+              <div className="relative rounded-full overflow-hidden border-4 border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+                <Image
+                  src="/profile-placeholder.jpg"
+                  alt="Profile"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
-            <h1 className="text-3xl font-bold text-center mb-2">Dongzhou Li</h1>
+            <h1 className="text-3xl font-bold text-center mb-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">Dongzhou Li</h1>
             <p className="text-gray-400 text-center mb-8">Software Engineer</p>
             <div className="flex flex-col gap-4">
               <a
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-blue-600 py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+                className="group flex items-center justify-center gap-2 bg-blue-600/80 backdrop-blur-sm py-2 px-4 rounded-lg hover:bg-blue-700 transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)]"
               >
-                <FaFileAlt /> Resume
+                <FaFileAlt className="group-hover:scale-110 transition-transform" /> 
+                <span className="group-hover:translate-x-1 transition-transform">Resume</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/dongzhou-roger-li-161318278/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-gray-800 py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors"
+                className="group flex items-center justify-center gap-2 bg-gray-800/80 backdrop-blur-sm py-2 px-4 rounded-lg hover:bg-gray-700 transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]"
               >
-                <FaLinkedin /> LinkedIn
+                <FaLinkedin className="group-hover:scale-110 transition-transform" /> 
+                <span className="group-hover:translate-x-1 transition-transform">LinkedIn</span>
               </a>
               <a
                 href="https://github.com/dl3648"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-gray-800 py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors"
+                className="group flex items-center justify-center gap-2 bg-gray-800/80 backdrop-blur-sm py-2 px-4 rounded-lg hover:bg-gray-700 transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]"
               >
-                <FaGithub /> GitHub
+                <FaGithub className="group-hover:scale-110 transition-transform" /> 
+                <span className="group-hover:translate-x-1 transition-transform">GitHub</span>
               </a>
               <a
                 href="mailto:dongzholi23@gmail.com"
-                className="flex items-center justify-center gap-2 bg-gray-800 py-2 px-4 rounded-lg hover:bg-gray-700 transition-colors"
+                className="group flex items-center justify-center gap-2 bg-gray-800/80 backdrop-blur-sm py-2 px-4 rounded-lg hover:bg-gray-700 transition-all duration-300 hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]"
               >
-                <FaEnvelope /> Email
+                <FaEnvelope className="group-hover:scale-110 transition-transform" /> 
+                <span className="group-hover:translate-x-1 transition-transform">Email</span>
               </a>
             </div>
           </div>
@@ -115,7 +126,7 @@ export default function Home() {
           {/* Main Content */}
           <div className="w-full md:w-2/3 p-8 pt-24">
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">About Me</h2>
+              <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">About Me</h2>
               <p className="text-gray-300 leading-relaxed">
                 I am a graduate student at Columbia University, passionate about software development
                 and machine learning. With a strong foundation in computer science and practical

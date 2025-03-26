@@ -21,7 +21,7 @@ export default function Hero() {
       </p>
       <div className="flex space-x-6">
         <a
-          href="https://github.com/dl3648"
+          href="https://github.com/dl364823"
           target="_blank"
           rel="noopener noreferrer"
           className="text-2xl hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
